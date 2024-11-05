@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Animation with CSS Hover</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       
+        .container {
+            height: 100vh;
+            padding: 0% 0%;
+            background-color: rgb(125, 118, 118);
+            text-align: center;
+            display: grid;
+            justify-items: center;
+            grid-template-columns: 33.3% 33.3% 33.3%;
+        }
+        .animated_image {
+            margin-top: 5%;
+            width: 100%;
+            height: 30vh;
+            transition: transform 2s ease-in-out;
+            border: 2px solid;
+        }
+        .buttons {
+            margin-top: 10%;
+            display: flex;
+            flex-direction: column;
+        }
+        .buttons a {
+            text-decoration: none;
+            margin: 0% 30%;
+            padding: 2%;
+            border: 2px solid white;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+        }
+        .buttons a:hover {
+            color: rgb(18, 120, 18);
+            background-color: skyblue;
+            border: 3px solid rgb(234, 167, 253);
+        }
+        .s1:hover ~ .animated_image{
+            transform: rotate(360deg);
+        }
+        .s2:hover ~ .animated_image {
+            transform: scale(1.5);
+        }
+        .s3:hover ~ .animated_image {
+            transform: skew(50deg);
+        }
+        .s4:hover ~ .animated_image{
+            transform: Translate(10px,20px);
+        }
+        .s5:hover ~ .animated_image {
+            transform: rotateX(100deg);
+        }
+        .s6:hover ~ .animated_image {
+            transform: rotateY(100deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="buttons">
+            <a href="#" class="s1">Rotate</a>
+            <img src="wings.jpeg" alt="Sample Image" class="animated_image">
+        </div>
+
+        <div class="buttons">
+            <a href="#" class="s2">Scale</a>
+            <img src="wings.jpeg" alt="Sample Image" class="animated_image">
+        </div>
+
+        <div class="buttons">
+            <a href="#" class="s3">Skew</a>
+            <img src="wings.jpeg" alt="Sample Image" class="animated_image">
+        </div>
+
+        <div class="buttons">
+            <a href="#" class="s4">Translate</a>
+            <img src="wings.jpeg" alt="Sample Image" class="animated_image">
+        </div>
+
+        <div class="buttons">
+            <a href="#" class="s5">RotateX</a>
+            <img src="wings.jpeg" alt="Sample Image" class="animated_image">
+        </div>
+
+        <div class="buttons">
+            <a href="#" class="s6">RotateY</a>
+            <img src="wings.jpeg" alt="Sample Image" class="animated_image">
+        </div>
+        
+    </div>
+</body>
+</html>
